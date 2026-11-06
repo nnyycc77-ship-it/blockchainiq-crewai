@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blockchainiq-crewai"
+version = "0.1.0"
+description = "CrewAI tool that fetches the Blockchain IQ crypto market brief through the x402 protocol on Base"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "crewai>=0.100",
+    "x402[evm,requests]>=2.0",
+    "eth-account>=0.13",
+    "requests>=2.31",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
